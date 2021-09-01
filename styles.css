@@ -1,91 +1,36 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-div.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50vh;
-    background-color: black;
-}
-
-div.container div.ball {
+div.child {
     width: 100px;
     height: 100px;
+    background-color: aqua;
+}
+
+div.child:hover {
+    background-color: blue;
+}
+
+input:focus {
+    background-color: orange !important;
+}
+
+div::selection {
+    color: brown;
+}
+
+li {
+    list-style: none;
+    font-size: 4rem;
+    position: relative;
+    width: 200px;
+    display: inline-block;
+}
+
+li::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
     background-color: blueviolet;
-}
-
-div.ball {
-    margin: 10px;
-    animation-duration: 2s;
-    animation-name: stylish-rotate;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-    animation: stylish-rotate 2s ease infinite;
-}
-
-div.ball:nth-child(2) {
-    animation-delay: 2s;
-    animation-name: bounce;
-    animation-duration: 2s;
-}
-
-div.ball:nth-child(3) {
-    animation-delay: 2.5s;
-}
-
-div.ball:nth-child(4) {
-    animation-delay: 3s;
-    animation-name: bounce;
-    animation-duration: 2s;
-}
-
-div.ball:nth-child(5) {
-    animation-delay: 3.2s;
-}
-
-@keyframes bounce {
-    0% {}
-    25% {
-        transform: translateY(100px);
-    }
-    50% {
-        transform: translateY(0px);
-    }
-    75% {
-        transform: translateY(-100px);
-    }
-    100% {}
-}
-
-@keyframes stylish-rotate {
-    0% {
-        background-color: violet;
-    }
-    14% {
-        background-color: indigo;
-    }
-    28% {
-        background-color: blue;
-    }
-    42% {
-        background-color: green;
-    }
-    56% {
-        background-color: yellow;
-    }
-    70% {
-        background-color: orange;
-    }
-    84% {
-        background-color: red;
-    }
-    100% {
-        transform: rotate(360deg);
-        background-color: white;
-        border-radius: 10px;
-    }
+    right: 10px;
+    top: 30px;
 }
