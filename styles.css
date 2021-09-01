@@ -24,6 +24,7 @@ div.ball {
     animation-name: stylish-rotate;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
+    animation: stylish-rotate 2s ease infinite;
 }
 
 div.ball:nth-child(2) {
