@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div.container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 50vh;
+    background-color: black;
+}
+
+div.container div.ball{
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+div.container div.ball:hover{
+    /* transform: rotateZ(60deg);
+    transform: scale(2); */
+    transform: translateX(400px);
+    background-color: dodgerblue;
+    cursor: pointer;
+    /* border-radius: 50%; */
+}
